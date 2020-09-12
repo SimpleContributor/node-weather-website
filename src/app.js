@@ -6,6 +6,10 @@ const geocode = require('./utils/geocode');
 const weather = require('./utils/weather');
 
 const app = express();
+
+// Port for listening to Heroku or local
+const port = process.env.PORT || 3000;
+
 const partialsPath = path.join(__dirname, '../views/partials');
 
 // This is absolutely necessary to use handlebars (hbs) in express
@@ -121,6 +125,6 @@ app.get('*', (req, res) => {
 })
 
 
-app.listen(3000, () => {
-    console.log('Server is up on Port 3000.');
+app.listen(port, () => {
+    console.log('Server is up on Port ' + port);
 })
