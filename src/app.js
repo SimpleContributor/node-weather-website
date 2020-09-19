@@ -27,22 +27,24 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather App',
-        name: 'Caleb Coe'
+        name: 'Caleb Coe',
+        landingText: 'To use this app, enter any a location any way you want. You can enter a State, City, Zip Code/Postal Code, or address for the temperature in that area.'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About Me',
-        name: 'CleebithMaximus'
+        name: 'Caleb Coe',
+        aboutMessage: 'This site was created by Caleb Coe. It uses data from mapbox.com and weatherstack.com.'
     })
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        title: 'Help Page (DYNAMIC)',
-        name: 'Cleebith',
-        helpMessage: 'In need of some assistance? I\'ll go get the paper clip...'
+        title: 'Help Page',
+        name: 'Caleb Coe',
+        helpMessage: 'If your app is not working be sure you are connected to the internet!'
     })
 })
 

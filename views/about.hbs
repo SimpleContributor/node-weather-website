@@ -10,8 +10,11 @@
     <body>
         <div class="main-content">
             {{>header}}
-            <p>This site was created by Caleb Coe. It uses data from mapbox.com and weatherstack.com.</p>
-            <img class="portrait" src="/img/BabyPhoto.jpg">
+            <p class="app-text">{{aboutMessage}}</p>
+
+            <div class="portrait-container">
+                <img class="portrait" src="/img/BabyPhoto.jpg">
+            </div>
         </div>
         {{>footer}}
     </body>
