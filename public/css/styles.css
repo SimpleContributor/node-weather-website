@@ -141,4 +141,8 @@ button{
     form input{
         margin-bottom: 26px;
     }
+
+    .portrait{
+        width: 150px;
+    }
 }
